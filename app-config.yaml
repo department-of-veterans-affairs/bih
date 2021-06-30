@@ -156,8 +156,8 @@ integrations:
       token: ${GITLAB_TOKEN}
   bitbucket:
     - host: bitbucket.org
-      username: zwk5004@gmail.com
-      appPassword: Kallie2015!
+      username: ${BITBUCKET_USERNAME}
+      appPassword: ${BITBUCKET_APP_PASSWORD}
   azure:
     - host: dev.azure.com
       token: ${AZURE_TOKEN}
