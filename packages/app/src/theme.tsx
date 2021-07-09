@@ -16,8 +16,17 @@
 import { createTheme, lightTheme } from '@backstage/theme';
 
 const myTheme = createTheme({
-  palette: lightTheme.palette,
-  fontFamily: 'Comic Sans MS',
+  palette: {
+    ...lightTheme.palette,
+    navigation: {
+      background: '#171717',
+      indicator: '#0071bb',
+      color: '#FFFFFF',
+      selectedColor: '#FFFFFF',
+    },
+  },
+  fontFamily:
+    'Source Sans Pro,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif',
   defaultPageTheme: 'home',
 });
 
