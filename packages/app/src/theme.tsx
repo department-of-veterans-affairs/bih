@@ -19,7 +19,7 @@ const myTheme = createTheme({
   palette: {
     ...lightTheme.palette,
     navigation: {
-      background: '#171717',
+      background: '#293e40',
       indicator: '#0071bb',
       color: '#FFFFFF',
       selectedColor: '#FFFFFF',
