@@ -57,7 +57,7 @@ Check out [the documentation](https://backstage.io/docs/getting-started) on how 
 - Give us a star ⭐️ - If you are using Backstage or think it is an interesting project, we would love a star ❤️
 
 ## BIH Style Guide
-![StyledColors](https://user-images.githubusercontent.com/12993587/125840117-4567f278-2bfd-4e0f-849f-3376eebfdb92.png)
+![updatedColors](https://user-images.githubusercontent.com/12993587/125858910-7961a44a-3ce8-4854-a1a3-fbc4809bb396.png)
 - #112e51 background for all headers and content banners.
 - #293e40 background for the left Nav, this color can be found in the VA's Service Now. 
 - #FFFFFF most widely used font color, some dropdowns and headers.
