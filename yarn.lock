@@ -5997,15 +5997,10 @@
   resolved "https://registry.npmjs.org/@types/lunr/-/lunr-2.3.3.tgz#ec985618fd2712c010f8edab4f1ae7784ad7c583"
   integrity sha512-09sXZZVsB3Ib41U0fC+O1O+4UOZT1bl/e+/QubPxpqDWHNEchvx/DEb1KJMOwq6K3MTNzZFoNSzVdR++o1DVnw==
 
-"@types/luxon@^1.25.0":
-  version "1.26.5"
-  resolved "https://registry.npmjs.org/@types/luxon/-/luxon-1.26.5.tgz#843fb705e16e4d2a90847a351b799ea9d879859e"
-  integrity sha512-XeQxxRMyJi1znfzHw4CGDLyup/raj84SnjjkI2fDootZPGlB0yqtvlvEIAmzHDa5wiEI5JJevZOWxpcofsaV+A==
-
-"@types/luxon@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.npmjs.org/@types/luxon/-/luxon-1.27.0.tgz#1e3b5a7f8ca6944349c43498b4442b742c71ab0b"
-  integrity sha512-rr2lNXsErnA/ARtgFn46NtQjUa66cuwZYeo/2K7oqqxhJErhXgHBPyNKCo+pfOC3L7HFwtao8ebViiU9h4iAxA==
+"@types/luxon@^1.25.0", "@types/luxon@^1.27.0":
+  version "1.27.1"
+  resolved "https://registry.npmjs.org/@types/luxon/-/luxon-1.27.1.tgz#aceeb2d5be8fccf541237e184e37ecff5faa9096"
+  integrity sha512-cPiXpOvPFDr2edMnOXlz3UBDApwUfR+cpizvxCy0n3vp9bz/qe8BWzHPIEFcy+ogUOyjKuCISgyq77ELZPmkkg==
 
 "@types/markdown-to-jsx@^6.11.0":
   version "6.11.2"
