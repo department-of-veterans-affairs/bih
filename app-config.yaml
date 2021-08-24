@@ -179,6 +179,13 @@ catalog:
         - Location
 
   processors:
+    githubMultiOrg:
+      orgs:
+        - name: paylanx
+        groupNamespace: paylanx
+        - name: sparkynow
+        groupNamespace: sparkynow
+        
     githubOrg:
       providers:
         - target: https://github.com
@@ -217,9 +224,9 @@ catalog:
 
   locations:
     - type: github-org
-      target: https://github.com/Paylanx
+      target: https://github.com/Paylanx/JsTest/blob/main/catalog-info.yaml
     - type: github-org
-      target: https://github.com/Sparkynow
+      target: https://github.com/Sparkynow/Sparkynow/blob/master/catalog-info.yaml
 
     # Add a location here to ingest it, for example from a URL:
     #

@@ -17,7 +17,7 @@
 import {
   CatalogBuilder,
   createRouter,
-  GithubOrgReaderProcessor,
+  GithubMultiOrgReaderProcessor,
 } from '@backstage/plugin-catalog-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
