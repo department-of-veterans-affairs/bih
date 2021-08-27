@@ -6856,9 +6856,9 @@
     "@types/node" "*"
 
 "@types/ldapjs@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/@types/ldapjs/-/ldapjs-2.2.0.tgz#43ff78668c420b69a61b93e0acde71ddc0c7766d"
-  integrity sha512-L6ObSryRGOw0qYmN9B4w4s8UkoyRbxoWh7C1vc/Z6O/VXJQJqGBSyZPXRDmgKF+TZVGq/F7H37t0Cxrm+hLiRA==
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/@types/ldapjs/-/ldapjs-2.2.1.tgz#bf08aa7dc654cb04db9458160d102f51f63b21ad"
+  integrity sha512-rctCsjTBpG86j352gd6BfFevpcG2Rvh2K6t3BLO3VJMe6JSGDI5rovA+8O/rxL5PbXz0UFBdDu7wv/1hA/0GjA==
   dependencies:
     "@types/node" "*"
 
@@ -10979,9 +10979,9 @@ core-js@^3.0.4, core-js@^3.6.5, core-js@^3.8.2:
   integrity sha512-GUbtPllXMYRzIgHNZ4dTYTcUemls2cni83Q4Q/TrFONHfhcg9oEGOtaGHfb0cpzec60P96UKPvMkjX1jET8rUw==
 
 core-js@^3.6.0:
-  version "3.16.2"
-  resolved "https://registry.npmjs.org/core-js/-/core-js-3.16.2.tgz#3f485822889c7fc48ef463e35be5cc2a4a01a1f4"
-  integrity sha512-P0KPukO6OjMpjBtHSceAZEWlDD1M2Cpzpg6dBbrjFqFhBHe/BwhxaP820xKOjRn/lZRQirrCusIpLS/n2sgXLQ==
+  version "3.16.3"
+  resolved "https://registry.npmjs.org/core-js/-/core-js-3.16.3.tgz#1f2d43c51a9ed014cc6c83440af14697ae4b75f2"
+  integrity sha512-lM3GftxzHNtPNUJg0v4pC2RC6puwMd6VZA7vXUczi+SKmCWSf4JwO89VJGMqbzmB7jlK7B5hr3S64PqwFL49cA==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
