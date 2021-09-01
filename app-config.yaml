@@ -1,9 +1,9 @@
 app:
-  title: Scaffolded Backstage App
+  title: BIH Backstage App
   baseUrl: http://localhost:3000
 
 organization:
-  name: My Company
+  name: BIH
 
 backend:
   baseUrl: http://localhost:7000

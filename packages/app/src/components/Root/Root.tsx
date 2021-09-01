@@ -18,7 +18,7 @@ import React, { useContext, PropsWithChildren } from 'react';
 import { Link, makeStyles } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import ExtensionIcon from '@material-ui/icons/Extension';
-import MapIcon from '@material-ui/icons/MyLocation';
+import LayersIcon from '@material-ui/icons/Layers';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import CreateComponentIcon from '@material-ui/icons/AddCircleOutline';
 import LogoFull from './LogoFull';
@@ -34,7 +34,6 @@ import {
   SidebarItem,
   SidebarDivider,
   SidebarSpace,
-  SidebarScrollWrapper,
 } from '@backstage/core-components';
 
 const useSidebarLogoStyles = makeStyles({
@@ -80,12 +79,15 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
       <SidebarItem icon={HomeIcon} to="catalog" text="Home" />
       <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
       <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
+      <SidebarItem icon={LayersIcon} to="explore" text="Explore" />
       <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />
-      {/* End global nav */}
+      {/* End global nav 
       <SidebarDivider />
       <SidebarScrollWrapper>
         <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
       </SidebarScrollWrapper>
+      <SidebarSpace />
+      <SidebarDivider />*/}
       <SidebarSpace />
       <SidebarDivider />
       <SidebarSettings />
