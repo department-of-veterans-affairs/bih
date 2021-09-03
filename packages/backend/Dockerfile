@@ -9,7 +9,8 @@
 #
 # Once the commands have been run, you can build the image using `yarn build-image`
 
-FROM node:14-buster-slim
+# FROM node:14-buster-slim
+FROM container-registry.dev8.bip.va.gov/rhscl/nginx-118-rhel7:latest
 
 WORKDIR /app
 
