@@ -45,22 +45,22 @@ yarnGitflowPipeline {
     *************************************************************************/
 
     //which node image to use in the pipeline
-    node_image = "node:lts"
+    // node_image = "node:lts"
 
     //whether or not to include node modules in the stash from build stage to the deploy stage
     //stash_node_modules = true
 
     //directory of artifacts which should be archived and attached to this build
-    build_artifacts = "dist/**"
+    // build_artifacts = "dist/**"
 
     //what version is your application on - this can be an additional tag to your docker image
-    version = "0.0.1"
+    // version = "0.0.1"
 
     //Testing and skipping section
-    skipTests = true
+    // skipTests = true
     //skipPrismaCloud = false
     //safePrismaCloudScan = true
-    skipSelenium = true
+    // skipSelenium = true
     //skip508Tests = true
 
 }
