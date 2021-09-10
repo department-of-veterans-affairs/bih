@@ -16196,7 +16196,7 @@ react-router@6.0.0-beta.0:
   dependencies:
     prop-types "^15.7.2"
 
-react-router@^6.0.0-beta.0:
+react-router@6.0.0-beta.3, react-router@^6.0.0-beta.0:
   version "6.0.0-beta.3"
   resolved "https://registry.npmjs.org/react-router/-/react-router-6.0.0-beta.3.tgz#d1276202eee8a0269c6d24fc9be72d5448cc63ae"
   integrity sha512-5fSBKgb0VaUrMi1RJxeZZMyGkjGSd9HtoWtc2XIcBFc01l7y6jBg5mVkmifjhhdSlamE3y6E6RXpfzCWqEBPPA==
