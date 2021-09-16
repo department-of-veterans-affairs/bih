@@ -1402,10 +1402,10 @@
     yaml "^1.9.2"
     yup "^0.29.3"
 
-"@backstage/config@^0.1.2", "@backstage/config@^0.1.5", "@backstage/config@^0.1.6", "@backstage/config@^0.1.7", "@backstage/config@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.npmjs.org/@backstage/config/-/config-0.1.8.tgz#03782de290ae82fbf2f58538fd2ea3e668e5169b"
-  integrity sha512-W08XKgXDVS0WGQjAw6SYzH+T+WgpUeJWTwZ3XVBCoAh+XtG8y5KSLF5kiT30XVjZQgB5zZg6vKc8w/OE1hD6rA==
+"@backstage/config@^0.1.2", "@backstage/config@^0.1.5", "@backstage/config@^0.1.6", "@backstage/config@^0.1.7", "@backstage/config@^0.1.8", "@backstage/config@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.npmjs.org/@backstage/config/-/config-0.1.9.tgz#0d00f1255dccad5af14af89c27e2e35e01a6a13e"
+  integrity sha512-3CvLFAM2cNBlz28d6yA4SPsKB5WHKPCJIsf6lCz0+4DQu6oVjELx6jvxKkMWKSp0E1lm7x32U7QbTQX5CwPfHQ==
   dependencies:
     lodash "^4.17.15"
 
@@ -1519,11 +1519,11 @@
     zen-observable "^0.8.15"
 
 "@backstage/core-plugin-api@^0.1.3", "@backstage/core-plugin-api@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.npmjs.org/@backstage/core-plugin-api/-/core-plugin-api-0.1.6.tgz#d636839ee3eb5f663908f13064dbed10a61a289c"
-  integrity sha512-CG4Csyz4MtL2F9FjgIJnqSCD6XiqDhh06r3LIoslVKyBVNl9F9IEC0ntJDiCdzKLScWQxqhS2Vv/R6V6Y8eK9A==
+  version "0.1.7"
+  resolved "https://registry.npmjs.org/@backstage/core-plugin-api/-/core-plugin-api-0.1.7.tgz#21dc85c9668d348924e7779507184751f5f35e5f"
+  integrity sha512-c95c0ghy7s4XDvy3MK+xDUqro4YdXn2L1wgtwxvLd0BVEY4ngEUOYfPB4ZXIhi1kSFDmIa5ZUJOxSO3W/jLlYQ==
   dependencies:
-    "@backstage/config" "^0.1.6"
+    "@backstage/config" "^0.1.9"
     "@backstage/theme" "^0.2.9"
     "@material-ui/core" "^4.12.2"
     "@types/react" "*"
@@ -10042,7 +10042,7 @@ graphlib@^2.1.8:
   dependencies:
     lodash "^4.17.15"
 
-graphql-language-service-interface@^2.8.2:
+graphql-language-service-interface@2.8.2, graphql-language-service-interface@^2.8.2:
   version "2.8.2"
   resolved "https://registry.npmjs.org/graphql-language-service-interface/-/graphql-language-service-interface-2.8.2.tgz#b3bb2aef7eaf0dff0b4ea419fa412c5f66fa268b"
   integrity sha512-otbOQmhgkAJU1QJgQkMztNku6SbJLu/uodoFOYOOtJsizTjrMs93vkYaHCcYnLA3oi1Goj27XcHjMnRCYQOZXQ==
@@ -10052,7 +10052,7 @@ graphql-language-service-interface@^2.8.2:
     graphql-language-service-utils "^2.5.1"
     vscode-languageserver-types "^3.15.1"
 
-graphql-language-service-parser@^1.9.0:
+graphql-language-service-parser@1.9.0, graphql-language-service-parser@^1.9.0:
   version "1.9.0"
   resolved "https://registry.npmjs.org/graphql-language-service-parser/-/graphql-language-service-parser-1.9.0.tgz#79af21294119a0a7e81b6b994a1af36833bab724"
   integrity sha512-B5xPZLbBmIp0kHvpY1Z35I5DtPoDK9wGxQVRDIzcBaiIvAmlTrDvjo3bu7vKREdjFbYKvWNgrEWENuprMbF17Q==
