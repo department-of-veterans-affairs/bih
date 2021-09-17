@@ -1215,16 +1215,16 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
-"@backstage/backend-common@^0.9.0", "@backstage/backend-common@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.npmjs.org/@backstage/backend-common/-/backend-common-0.9.1.tgz#f7753922b5264b6e0eb6286369fd9a211c3357f2"
-  integrity sha512-hXyEu/jZMZ/DJ/4mKrCNWg8yrttmSGXCVJ5Yiiv8XqXgaYOgnJqU+siRLVlrp6oC0HqGVoxtXm6rO9M6cTJ1Ag==
+"@backstage/backend-common@^0.9.0", "@backstage/backend-common@^0.9.1", "@backstage/backend-common@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.npmjs.org/@backstage/backend-common/-/backend-common-0.9.3.tgz#70f7b4063ab2133bfd0f93cd5f1d778b1a2cc516"
+  integrity sha512-0rhsQTbwMpl3ISfOBHRq2mz/ZS/byH1myDUYoU3+Sf44nvTiqcT95b6Oog/Ir9bqIGqaUbvtnQ2mboMAhMns3Q==
   dependencies:
-    "@backstage/cli-common" "^0.1.2"
-    "@backstage/config" "^0.1.8"
-    "@backstage/config-loader" "^0.6.7"
-    "@backstage/errors" "^0.1.1"
-    "@backstage/integration" "^0.6.3"
+    "@backstage/cli-common" "^0.1.3"
+    "@backstage/config" "^0.1.9"
+    "@backstage/config-loader" "^0.6.8"
+    "@backstage/errors" "^0.1.2"
+    "@backstage/integration" "^0.6.4"
     "@google-cloud/storage" "^5.8.0"
     "@octokit/rest" "^18.5.3"
     "@types/cors" "^2.8.6"
@@ -1240,7 +1240,7 @@
     express "^4.17.1"
     express-promise-router "^4.1.0"
     fs-extra "9.1.0"
-    git-url-parse "~11.4.4"
+    git-url-parse "^11.6.0"
     helmet "^4.0.0"
     isomorphic-git "^1.8.0"
     keyv "^4.0.3"
@@ -1288,6 +1288,11 @@
   version "0.1.2"
   resolved "https://registry.npmjs.org/@backstage/cli-common/-/cli-common-0.1.2.tgz#391ae00a58a1bd813952d854c9f7cc2bf5254b14"
   integrity sha512-oP6GL6jet3Qh2kyQkjgRVf/vQRhpJTmbL+YsH9QGQSLLv7lZQcK11QrN8+uH2VgZI8yiVU+bPkLBLsdeM1rySg==
+
+"@backstage/cli-common@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.npmjs.org/@backstage/cli-common/-/cli-common-0.1.3.tgz#6fc6f42548fd36a20d5d1809653d6c890591c48f"
+  integrity sha512-PY4L2KwoYvwZEXZ2F6BGESfzEGsHaNEqOm2+WuWL3iLACmpR2UlhqkqPxwXxWnVhudOn13O3aeiIn/6HocPU2w==
 
 "@backstage/cli@^0.7.9":
   version "0.7.9"
@@ -1402,10 +1407,27 @@
     yaml "^1.9.2"
     yup "^0.29.3"
 
-"@backstage/config@^0.1.2", "@backstage/config@^0.1.5", "@backstage/config@^0.1.6", "@backstage/config@^0.1.7", "@backstage/config@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.npmjs.org/@backstage/config/-/config-0.1.8.tgz#03782de290ae82fbf2f58538fd2ea3e668e5169b"
-  integrity sha512-W08XKgXDVS0WGQjAw6SYzH+T+WgpUeJWTwZ3XVBCoAh+XtG8y5KSLF5kiT30XVjZQgB5zZg6vKc8w/OE1hD6rA==
+"@backstage/config-loader@^0.6.8":
+  version "0.6.8"
+  resolved "https://registry.npmjs.org/@backstage/config-loader/-/config-loader-0.6.8.tgz#a561cf56d736bb29b521363d61a374605b1066d6"
+  integrity sha512-OMOxhBUPyMNoAs7Sn9ZwogJ4W4cVpE3WfRFa3nxdIF12S/2MMXZa9UjHI1u9AL1odRsKlzHc44D5smzlupFGqw==
+  dependencies:
+    "@backstage/cli-common" "^0.1.3"
+    "@backstage/config" "^0.1.9"
+    "@types/json-schema" "^7.0.6"
+    ajv "^7.0.3"
+    chokidar "^3.5.2"
+    fs-extra "9.1.0"
+    json-schema "^0.3.0"
+    json-schema-merge-allof "^0.8.1"
+    typescript-json-schema "^0.50.1"
+    yaml "^1.9.2"
+    yup "^0.29.3"
+
+"@backstage/config@^0.1.5", "@backstage/config@^0.1.6", "@backstage/config@^0.1.7", "@backstage/config@^0.1.8", "@backstage/config@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.npmjs.org/@backstage/config/-/config-0.1.9.tgz#0d00f1255dccad5af14af89c27e2e35e01a6a13e"
+  integrity sha512-3CvLFAM2cNBlz28d6yA4SPsKB5WHKPCJIsf6lCz0+4DQu6oVjELx6jvxKkMWKSp0E1lm7x32U7QbTQX5CwPfHQ==
   dependencies:
     lodash "^4.17.15"
 
@@ -1534,12 +1556,12 @@
     react-use "^17.2.4"
     zen-observable "^0.8.15"
 
-"@backstage/errors@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@backstage/errors/-/errors-0.1.1.tgz#2663b5400936585148b377972ded7dc5d0545bfb"
-  integrity sha512-Jw0880Zb2q/Urxn38NaxEVW0Eiz36iPxxo3Tn8YgOmAqmDidzgp8rbn6bhfIYnyzvqanwskuNJl+A8SgzWp3cA==
+"@backstage/errors@^0.1.1", "@backstage/errors@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@backstage/errors/-/errors-0.1.2.tgz#3af40670c8f13c6382fa3e87d1e5ee53489d7bce"
+  integrity sha512-AfLcuxqOtjJvqv2DYd6NcZp+s/hYHQ7esiZvx+t5VgFfKoKm2uyPOL5gUsGRYq7jDEDchcqN+oYrwaZ7YIo2Cg==
   dependencies:
-    "@backstage/config" "^0.1.2"
+    "@backstage/config" "^0.1.9"
     cross-fetch "^3.0.6"
     serialize-error "^8.0.1"
 
@@ -1570,6 +1592,18 @@
     "@octokit/rest" "^18.5.3"
     cross-fetch "^3.0.6"
     git-url-parse "~11.4.4"
+    luxon "^2.0.2"
+
+"@backstage/integration@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.npmjs.org/@backstage/integration/-/integration-0.6.4.tgz#797ee2d26850ea1a8b609aa075c5202953c06a06"
+  integrity sha512-1HoDkL+AuLRrBaXALK4+R0PCzENkJEWxUj6nNw21Y55lISiu3GS0YgrCYd0uABIEauLEhIZj492me0b3haZl9g==
+  dependencies:
+    "@backstage/config" "^0.1.8"
+    "@octokit/auth-app" "^3.4.0"
+    "@octokit/rest" "^18.5.3"
+    cross-fetch "^3.0.6"
+    git-url-parse "^11.6.0"
     luxon "^2.0.2"
 
 "@backstage/plugin-api-docs@^0.6.6":
@@ -1614,14 +1648,14 @@
     winston "^3.2.1"
     yn "^4.0.0"
 
-"@backstage/plugin-auth-backend@^0.3.23":
-  version "0.3.23"
-  resolved "https://registry.npmjs.org/@backstage/plugin-auth-backend/-/plugin-auth-backend-0.3.23.tgz#6136d0017469f6fc862bf2b83f6a55b16bd02a39"
-  integrity sha512-Wz11G2qxmsWEK+o0pfbSKih2Hx/EnFAg+O9vnc9d+SzQRhLboVNkzeqg5fwEoGz/gxJ891rOc3McYXl+sVoLDg==
+"@backstage/plugin-auth-backend@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@backstage/plugin-auth-backend/-/plugin-auth-backend-0.4.0.tgz#6604934e2ca1858535f762ad3a3c9f4698e14036"
+  integrity sha512-YhpdqQBzFfKZT/aWk7EZifnnEcU4cC7hvwIyQqNXeyuIJQZUUYvw3/7N7OjBlezI356autdKr3op0Pxp3QGuLQ==
   dependencies:
-    "@backstage/backend-common" "^0.9.0"
+    "@backstage/backend-common" "^0.9.3"
     "@backstage/catalog-client" "^0.3.18"
-    "@backstage/catalog-model" "^0.9.0"
+    "@backstage/catalog-model" "^0.9.1"
     "@backstage/config" "^0.1.8"
     "@backstage/errors" "^0.1.1"
     "@backstage/test-utils" "^0.1.17"
@@ -1654,7 +1688,7 @@
     passport-oauth2 "^1.5.0"
     passport-okta-oauth "^0.0.1"
     passport-onelogin-oauth "^0.0.1"
-    passport-saml "^2.0.0"
+    passport-saml "^3.1.2"
     uuid "^8.0.0"
     winston "^3.2.1"
     yn "^4.0.0"
@@ -4994,6 +5028,11 @@
   dependencies:
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
+
+"@xmldom/xmldom@^0.7.0", "@xmldom/xmldom@^0.7.2":
+  version "0.7.5"
+  resolved "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.5.tgz#09fa51e356d07d0be200642b0e4f91d8e6dd408d"
+  integrity sha512-V3BIhmY36fXZ1OtVcI9W+FxQqxVLsPKcNjWigIaa81dLC9IolJl5Mt4Cvhmr0flUnjSpTdrbMTSbXqYqV5dT6A==
 
 "@xobotyi/scrollbar-width@1.9.5", "@xobotyi/scrollbar-width@^1.9.5":
   version "1.9.5"
@@ -9801,6 +9840,13 @@ git-url-parse@^11.4.4, git-url-parse@~11.4.4:
   dependencies:
     git-up "^4.0.0"
 
+git-url-parse@^11.6.0:
+  version "11.6.0"
+  resolved "https://registry.npmjs.org/git-url-parse/-/git-url-parse-11.6.0.tgz#c634b8de7faa66498a2b88932df31702c67df605"
+  integrity sha512-WWUxvJs5HsyHL6L08wOusa/IXYtMuCAhrMmnTjQPpBU0TTHyDhnOATNH3xNQz7YOQUsqIIPTGr4xiVti1Hsk5g==
+  dependencies:
+    git-up "^4.0.0"
+
 gitconfiglocal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/gitconfiglocal/-/gitconfiglocal-1.0.0.tgz#41d045f3851a5ea88f03f24ca1c6178114464b9b"
@@ -10042,7 +10088,7 @@ graphlib@^2.1.8:
   dependencies:
     lodash "^4.17.15"
 
-graphql-language-service-interface@^2.8.2:
+graphql-language-service-interface@2.8.2, graphql-language-service-interface@^2.8.2:
   version "2.8.2"
   resolved "https://registry.npmjs.org/graphql-language-service-interface/-/graphql-language-service-interface-2.8.2.tgz#b3bb2aef7eaf0dff0b4ea419fa412c5f66fa268b"
   integrity sha512-otbOQmhgkAJU1QJgQkMztNku6SbJLu/uodoFOYOOtJsizTjrMs93vkYaHCcYnLA3oi1Goj27XcHjMnRCYQOZXQ==
@@ -10052,7 +10098,7 @@ graphql-language-service-interface@^2.8.2:
     graphql-language-service-utils "^2.5.1"
     vscode-languageserver-types "^3.15.1"
 
-graphql-language-service-parser@^1.9.0:
+graphql-language-service-parser@1.9.0, graphql-language-service-parser@^1.9.0:
   version "1.9.0"
   resolved "https://registry.npmjs.org/graphql-language-service-parser/-/graphql-language-service-parser-1.9.0.tgz#79af21294119a0a7e81b6b994a1af36833bab724"
   integrity sha512-B5xPZLbBmIp0kHvpY1Z35I5DtPoDK9wGxQVRDIzcBaiIvAmlTrDvjo3bu7vKREdjFbYKvWNgrEWENuprMbF17Q==
@@ -14869,20 +14915,20 @@ passport-onelogin-oauth@^0.0.1:
     pkginfo "0.2.x"
     uid2 "0.0.3"
 
-passport-saml@^2.0.0:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/passport-saml/-/passport-saml-2.0.5.tgz#d822225875d0ec640236bf27ad8d5d9436396dea"
-  integrity sha512-D9OkTZ2hgRHZZFU3BUPKz7PC/khu9jmJtGCoJOQcn8JKR+AW9H/aj1E32VPu/iQbYMXXxEEt4qMhkCZzK9trzw==
+passport-saml@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.npmjs.org/passport-saml/-/passport-saml-3.1.2.tgz#34a0c2c423d729ce102e69fea9c22040910e6d43"
+  integrity sha512-EhD3/ofiz1vu7R72i4RskXk/dQG9GyDmXPdHJf5LYB+93B5kvKv5p+5lpZgO3z+Wf3eN0h/tGdGd6noyYdjY6g==
   dependencies:
+    "@xmldom/xmldom" "^0.7.2"
     debug "^4.3.1"
-    passport-strategy "*"
-    xml-crypto "^2.0.0"
-    xml-encryption "1.2.1"
+    passport-strategy "^1.0.0"
+    xml-crypto "^2.1.3"
+    xml-encryption "^1.3.0"
     xml2js "^0.4.23"
     xmlbuilder "^15.1.1"
-    xmldom "0.4.x"
 
-passport-strategy@*, passport-strategy@1.x.x:
+passport-strategy@1.x.x, passport-strategy@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
   integrity sha1-tVOaqPwiWj0a0XlHbd8ja0QPUuQ=
@@ -19899,23 +19945,23 @@ xml-but-prettier@^1.0.1:
   dependencies:
     repeat-string "^1.5.2"
 
-xml-crypto@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/xml-crypto/-/xml-crypto-2.0.0.tgz#54cd268ad9d31930afcf7092cbb664258ca9e826"
-  integrity sha512-/a04qr7RpONRZHOxROZ6iIHItdsQQjN3sj8lJkYDDss8tAkEaAs0VrFjb3tlhmS5snQru5lTs9/5ISSMdPDHlg==
+xml-crypto@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.npmjs.org/xml-crypto/-/xml-crypto-2.1.3.tgz#6a7272b610ea3e4ea7f13e9e4876f1b20cbc32c8"
+  integrity sha512-MpXZwnn9JK0mNPZ5mnFIbNnQa+8lMGK4NtnX2FlJMfMWR60sJdFO9X72yO6ji068pxixzk53O7x0/iSKh6IhyQ==
   dependencies:
-    xmldom "0.1.27"
-    xpath "0.0.27"
+    "@xmldom/xmldom" "^0.7.0"
+    xpath "0.0.32"
 
-xml-encryption@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.npmjs.org/xml-encryption/-/xml-encryption-1.2.1.tgz#e6d18817c4309fd07ca7793cca93c3fd06745baa"
-  integrity sha512-hn5w3l5p2+nGjlmM0CAhMChDzVGhW+M37jH35Z+GJIipXbn9PUlAIRZ6I5Wm7ynlqZjFrMAr83d/CIp9VZJMTA==
+xml-encryption@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npmjs.org/xml-encryption/-/xml-encryption-1.3.0.tgz#4cad44a59bf8bdec76d7865ce0b89e13c09962f4"
+  integrity sha512-3P8C4egMMxSR1BmsRM+fG16a3WzOuUEQKS2U4c3AZ5v7OseIfdUeVkD8dwxIhuLryFZSRWUL5OP6oqkgU7hguA==
   dependencies:
+    "@xmldom/xmldom" "^0.7.0"
     escape-html "^1.0.3"
     node-forge "^0.10.0"
-    xmldom "~0.1.15"
-    xpath "0.0.27"
+    xpath "0.0.32"
 
 xml-js@^1.6.11:
   version "1.6.11"
@@ -19965,30 +20011,15 @@ xmlchars@^2.2.0:
   resolved "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
 
-xmldom@0.1.27:
-  version "0.1.27"
-  resolved "https://registry.npmjs.org/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
-  integrity sha1-1QH5ezvbQDr4757MIFcxh6rawOk=
-
-xmldom@0.4.x:
-  version "0.4.0"
-  resolved "https://registry.npmjs.org/xmldom/-/xmldom-0.4.0.tgz#8771e482a333af44587e30ce026f0998c23f3830"
-  integrity sha512-2E93k08T30Ugs+34HBSTQLVtpi6mCddaY8uO+pMNk1pqSjV5vElzn4mmh6KLxN3hki8rNcHSYzILoh3TEWORvA==
-
 xmldom@^0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/xmldom/-/xmldom-0.6.0.tgz#43a96ecb8beece991cef382c08397d82d4d0c46f"
   integrity sha512-iAcin401y58LckRZ0TkI4k0VSM1Qg0KGSc3i8rU+xrxe19A/BN1zHyVSJY7uoutVlaTSzYyk/v5AmkewAP7jtg==
 
-xmldom@~0.1.15:
-  version "0.1.31"
-  resolved "https://registry.npmjs.org/xmldom/-/xmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
-  integrity sha512-yS2uJflVQs6n+CyjHoaBmVSqIDevTAWrzMmjG1Gc7h1qQ7uVozNhEPJAwZXWyGQ/Gafo3fCwrcaokezLPupVyQ==
-
-xpath@0.0.27:
-  version "0.0.27"
-  resolved "https://registry.npmjs.org/xpath/-/xpath-0.0.27.tgz#dd3421fbdcc5646ac32c48531b4d7e9d0c2cfa92"
-  integrity sha512-fg03WRxtkCV6ohClePNAECYsmpKKTv5L8y/X3Dn1hQrec3POx2jHZ/0P2qQ6HvsrU1BmeqXcof3NGGueG6LxwQ==
+xpath@0.0.32:
+  version "0.0.32"
+  resolved "https://registry.npmjs.org/xpath/-/xpath-0.0.32.tgz#1b73d3351af736e17ec078d6da4b8175405c48af"
+  integrity sha512-rxMJhSIoiO8vXcWvSifKqhvV96GjiD5wYb8/QHdoRyQvraTpp4IEv944nhGausZZ3u7dhQXteZuZbaqfpB7uYw==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
