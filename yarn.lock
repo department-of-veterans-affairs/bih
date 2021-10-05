@@ -1960,7 +1960,7 @@
     use-immer "^0.6.0"
     zen-observable "^0.8.15"
 
-"@backstage/plugin-search-backend-node@^0.4.0", "@backstage/plugin-search-backend-node@^0.4.1":
+"@backstage/plugin-search-backend-node@^0.4.0", "@backstage/plugin-search-backend-node@^0.4.1", "@backstage/plugin-search-backend-node@^0.4.2":
   version "0.4.2"
   resolved "https://registry.npmjs.org/@backstage/plugin-search-backend-node/-/plugin-search-backend-node-0.4.2.tgz#1ba6a9a811e79877e26ce553f8dc4f72fdec190c"
   integrity sha512-QmHTtsjWNzxNPynbAMW+WaBzoWuMZfr1Mf+sWWxTrn4GHUiukFt2og1uF/LEGT1smfwOnWZAy782ZHVQerogxQ==
@@ -1971,13 +1971,13 @@
     winston "^3.2.1"
 
 "@backstage/plugin-search-backend@^0.2.5":
-  version "0.2.5"
-  resolved "https://registry.npmjs.org/@backstage/plugin-search-backend/-/plugin-search-backend-0.2.5.tgz#42b4cdff91af0ce3f3799c01c5b8bf814233edde"
-  integrity sha512-43xnXwAGxaeT/lIJ5/9pa/tjATJjse3TuLNWCqiWvAdjNv89CxQdhYw/f+EZfD0LxY5TW2h8lbtonXVKFRl5rQ==
+  version "0.2.6"
+  resolved "https://registry.npmjs.org/@backstage/plugin-search-backend/-/plugin-search-backend-0.2.6.tgz#1a38b541025de79645a446d6e8ff073a8df076be"
+  integrity sha512-Yj3AjHm34oBFUww7eq8KSF+mz2cf82ETP9O6G6S+t9llkP1Udg748BYJnPWZcum3y6PImYpFnPNTaxObng+/Tg==
   dependencies:
-    "@backstage/backend-common" "^0.9.0"
-    "@backstage/plugin-search-backend-node" "^0.4.0"
-    "@backstage/search-common" "^0.1.2"
+    "@backstage/backend-common" "^0.9.1"
+    "@backstage/plugin-search-backend-node" "^0.4.2"
+    "@backstage/search-common" "^0.2.0"
     "@types/express" "^4.17.6"
     express "^4.17.1"
     express-promise-router "^4.1.0"
