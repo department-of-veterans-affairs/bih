@@ -47,6 +47,9 @@ yarnGitflowPipeline {
     //number of builds to keep in jenkins
     buildsToKeep = "30"
 
+    // skip accessibility tests
+    skipAccessibilityTests = true
+
     /*************************************************************************
     * Not yet implemented Configuration variables (These items can be requested and implementation effort can then begin)
     *************************************************************************/
