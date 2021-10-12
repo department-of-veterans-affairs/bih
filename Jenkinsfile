@@ -39,7 +39,7 @@ yarnGitflowPipeline {
     install_script = "install"
 
     //tests run in the jenkins pipeline
-    test_script = "test"
+    test_script = "test:all"
 
     //command to run npm build
     build_script = "build"
