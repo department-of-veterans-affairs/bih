@@ -68,8 +68,8 @@ yarnGitflowPipeline {
 
     //Testing and skipping section
     // skipTests = false
-    //skipPrismaCloud = false
-    //safePrismaCloudScan = true
+    // skipPrismaCloud = false
+    // safePrismaCloudScan = true
     // skipSelenium = true
     // skip508Tests = true
 
