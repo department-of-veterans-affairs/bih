@@ -1,6 +1,5 @@
 app:
   title: "Benefits Integration Hub"
-  baseUrl: http://bih.dev8.bip.va.gov:3000
 
 organization:
   name: ${BIH_ORG}
