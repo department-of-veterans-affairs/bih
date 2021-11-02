@@ -9,9 +9,8 @@ import {
   ApiRegistry,
   ConfigReader,
 } from '@backstage/core-app-api';
-import { resolve } from 'dns';
 import { msw, renderInTestApp } from '@backstage/test-utils';
-import { DashboardApi, DashboardRestApi, dashboardApi, dashboardApiRef } from '../../api/api';
+import { DashboardApi, DashboardRestApi, dashboardApiRef } from '../../api/api';
 
 describe('ExampleComponent', () => {
   const server = setupServer();
