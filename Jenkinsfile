@@ -55,7 +55,7 @@ yarnGitflowPipeline {
     *************************************************************************/
 
     //which node image to use in the pipeline
-    node_image = "node:14.18"
+    node_image = "node:14.18.1"
 
     //whether or not to include node modules in the stash from build stage to the deploy stage
     stash_node_modules = true
