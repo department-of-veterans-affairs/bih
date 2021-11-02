@@ -4,6 +4,7 @@ import useAsync from 'react-use/lib/useAsync';
 
 export function useDashboard() {
     const dashboardApi = useApi(dashboardApiRef);
+    console.log(dashboardApi);
     const response = useAsync(() => 
         dashboardApi.getDashboardData(), []
     );
