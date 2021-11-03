@@ -3,10 +3,11 @@ import { Grid } from '@material-ui/core';
 import { Header, Page, Content } from '@backstage/core-components';
 import { makeStyles } from '@material-ui/core/styles';
 import { LeftNavComponent } from '../LeftNavComponent';
-import {DashboardTable} from "./DashboardTable";
+import { DashboardTable } from './DashboardTable';
 import { Route } from 'react-router';
 import { FlatRoutes } from '@backstage/core-app-api';
-import {ImportantLinkComponent} from "../ImportantLinkComponent";
+import { ImportantLinkComponent } from '../ImportantLinkComponent';
+import { ContactsComponent } from '../ContactsComponent';
 
 const useStyles = makeStyles({
   gridPadding: {
@@ -43,6 +44,7 @@ export const DashboardComponent = () => {
               <FlatRoutes>
                 <Route path="/" element={<DashboardTable />} />
                 <Route path="/links" element={<ImportantLinkComponent />} />
+                <Route path="/contacts" element={<ContactsComponent />} />
               </FlatRoutes>
             </Grid>
           </Grid>
