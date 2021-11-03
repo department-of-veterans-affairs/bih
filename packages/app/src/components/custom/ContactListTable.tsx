@@ -84,11 +84,11 @@ export const ContactListTable = () => {
   const columns: TableColumn[] = [
     {
       title: 'Product Name',
-      field: 'prodIName',
+      field: 'prodName',
     },
     {
       title: 'Product Line',
-      field: 'productLine',
+      field: 'prodLine',
     },
     {
       title: 'VA PM',

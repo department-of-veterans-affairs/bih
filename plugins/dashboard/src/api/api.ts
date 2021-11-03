@@ -37,6 +37,16 @@ export type DashboardDataResponse = {
     burnRate: number;
 }
 
+export type ContactsResponse = {
+    data: {
+      productName: string;
+      productLine: string;
+      vaPm: string[];
+      bahPm: string[];
+      scrumMaster: string[];
+      techLead: string[];
+    }[];
+  };
 export class FetchError extends Error {
     get name(): string {
       return this.constructor.name;
@@ -54,6 +64,7 @@ export class FetchError extends Error {
 export type DashboardApi = {
     url: string;
     getDashboardData: () => Promise<DashboardDataResponse>;
+    getContacts: () => Promise<ContactsResponse>;
 }
 
 export const dashboardApiRef = createApiRef<DashboardApi>({
@@ -77,4 +88,8 @@ export class DashboardRestApi implements DashboardApi {
     async getDashboardData(): Promise<DashboardDataResponse> {
         return this.fetch<DashboardDataResponse>('/api/dashboard/data');
     }
+
+    async getContacts(): Promise<ContactsResponse> {
+        return this.fetch<ContactsResponse>('/api/dashboard/contacts');
+      }
 }
