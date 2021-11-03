@@ -34,16 +34,14 @@ type DashboardData = {
     burnRate: number;
 };
 
-function randomFloat(topRange?: number) {
-    if (topRange) {
-        return Math.random() * topRange;
-    }
-    return Math.random();
-}
-
-function randomInteger(topRange?: number) {
-    return Math.floor(randomFloat(topRange));
-}
+type ImportantLink = {
+  productName: string;
+  github: string[];
+  confluence: string[];
+  jira: string[];
+  licensing: string[];
+  sslCerts: string[];
+};
 
 export const getDashboardData = (): DashboardData => {
     return {
@@ -66,32 +64,45 @@ export const getDashboardData = (): DashboardData => {
         }
     ],
     cicd: {
-        jenkins: randomInteger(25),
-        github: randomInteger(50),
+        jenkins: 25,
+        github: 50,
     },
     tests: {
-        day: randomInteger(7),
-        week: randomInteger(35),
-        month: randomInteger(150),
+        day: 4,
+        week: 24,
+        month: 117,
     },
     acoe: {
         latestRelease: new Date(),
-        releaseFailure: randomFloat(),
-        mttr: randomInteger(30),
+        releaseFailure: .12,
+        mttr: 15,
     },
     health: Math.floor(Math.random() * 3) + 1,
     twistLock: {
-        low: randomInteger(25),
-        medium: randomInteger(30),
-        high: randomInteger(10),
-        critical: randomInteger(8),
-        riskFactors: randomInteger(20),
+        low: 20,
+        medium: 11,
+        high: 4,
+        critical: 3,
+        riskFactors: 11,
     },
     fortify: 'fortified',
     ato: {
-        progress: randomFloat(),
+        progress: 0.95,
         renews: new Date(),
     },
-    burnRate: randomFloat(),
+    burnRate: 0.77,
     }
+};
+
+export const getImportantLinks  = (): ImportantLink[] => {
+  return [
+    {
+      productName: 'Cool Product Bip',
+      github: ['https://www.githublink.com', 'https://www.githublink2.com', 'https://www.githublink3.com', 'https://www.githublink4.com', 'https://www.githublink5.com'],
+      confluence: ['https://www.confluencelink.com'],
+      jira: ['https://www.jiralink.com'],
+      licensing: ['https://www.licensingLink.com'],
+      sslCerts: ['https://www.ssl-cert.com']
+    }
+  ];
 };

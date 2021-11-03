@@ -37,11 +37,22 @@ export type DashboardDataResponse = {
     burnRate: number;
 }
 
+export type ImportantLinkResponse = {
+  data: {
+    productName: string;
+    github: string[];
+    confluence: string[];
+    jira: string[];
+    licensing: string[];
+    sslCerts: string[];
+  }[];
+};
+
 export class FetchError extends Error {
     get name(): string {
       return this.constructor.name;
     }
-  
+
     static async forResponse(resp: Response): Promise<FetchError> {
       return new FetchError(
         `Request failed with status code ${
@@ -54,6 +65,7 @@ export class FetchError extends Error {
 export type DashboardApi = {
     url: string;
     getDashboardData: () => Promise<DashboardDataResponse>;
+    getImportantLinks: () => Promise<ImportantLinkResponse>;
 }
 
 export const dashboardApiRef = createApiRef<DashboardApi>({
@@ -76,5 +88,9 @@ export class DashboardRestApi implements DashboardApi {
 
     async getDashboardData(): Promise<DashboardDataResponse> {
         return this.fetch<DashboardDataResponse>('/api/dashboard/data');
+    }
+
+    async getImportantLinks(): Promise<ImportantLinkResponse> {
+      return this.fetch<ImportantLinkResponse>('/api/dashboard/links');
     }
 }

@@ -1,2 +1,2 @@
 
-export { DashboardTable } from './DashboardTable';
+export { DashboardTable } from '../../../../../plugins/dashboard/src/components/DashboardComponent/DashboardTable';

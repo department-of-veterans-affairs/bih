@@ -24,3 +24,11 @@ export const DashboardPage = dashboardPlugin.provide(
     mountPoint: rootRouteRef,
   }),
 );
+
+export const ImportantLinkPage = dashboardPlugin.provide(
+  createRoutableExtension({
+    component: () => 
+    import('./components/ImportantLinkComponent').then(m => m.ImportantLinkComponent),
+    mountPoint: rootRouteRef,
+  }),
+);

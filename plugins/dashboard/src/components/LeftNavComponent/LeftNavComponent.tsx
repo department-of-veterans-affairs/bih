@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useAsync } from 'react-use';
 import { Content } from '@backstage/core-components'; */
 import { Box, List, ListItem, Typography } from '@material-ui/core';
+import {Link} from "@backstage/core-components";
 
 const useStyles = makeStyles({
   avatar: {
@@ -48,6 +49,8 @@ export const LeftNavComponent = (tableProp: any) => {
         <ListItem
           className={table === 'links' ? classes.selected : classes.unselected}
           onClick={() => resetPageLocation('links')}
+          component={Link}
+          to="/dashboard/links"
         >
           <Typography>Links</Typography>
         </ListItem>

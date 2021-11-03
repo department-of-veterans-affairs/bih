@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Table, TableColumn } from '@backstage/core-components';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
+import {useDashboard} from "../../hooks/useDashboard";
 
 const useStyles = makeStyles({
   gridParent: {
@@ -24,10 +25,10 @@ const useStyles = makeStyles({
   },
 });
 
-export const DashboardTable = (devOpsdata: any) => {
-  const classes = useStyles();
-  const [testData, setTestData] = useState([]);
+export const DashboardTable = () => {
 
+  const classes = useStyles();
+  const data = useDashboard();
   const mapDashBoardData = (devOpsdata: any) => {
     const linkData = (
       <Grid>
@@ -80,13 +81,17 @@ export const DashboardTable = (devOpsdata: any) => {
         other: null,
       },
     ];
-    setTestData(updatedTestData);
+
+    return updatedTestData;
   };
-  useEffect(() => {
-    if (devOpsdata.data !== null && testData.length === 0) {
-      mapDashBoardData(devOpsdata);
+  const testData = React.useMemo(() => {
+    if (data.value) {
+      return mapDashBoardData(data.value);
     }
-  });
+    return [];
+  }, [data]);
+
+
   const columns: TableColumn[] = [
     {
       title: 'ProductInfo',

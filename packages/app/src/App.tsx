@@ -24,7 +24,7 @@ import { UserSettingsPage } from '@backstage/plugin-user-settings';
 import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
 import { Root } from './components/Root';
-import { DashboardPage } from '@internal/plugin-dashboard';
+import { DashboardPage, ImportantLinkPage } from '@internal/plugin-dashboard';
 import { AlertDisplay, OAuthRequestDialog } from '@backstage/core-components';
 import { createApp, FlatRoutes } from '@backstage/core-app-api';
 import myTheme from './theme';
@@ -88,6 +88,7 @@ const routes = (
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/explore" element={<ExplorePage />} />
     <Route path="/dashboard" element={<DashboardPage />}/>
+    <Route path="/dashboard/links" element={<ImportantLinkPage />}/>
   </FlatRoutes>
 );
 

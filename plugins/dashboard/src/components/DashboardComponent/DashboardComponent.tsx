@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import { Header, Page, Content } from '@backstage/core-components';
 import { makeStyles } from '@material-ui/core/styles';
-import { DashboardTable } from '../../../../../packages/app/src/components/custom';
 import { LeftNavComponent } from '../LeftNavComponent';
 import { useDashboard } from '../../hooks/useDashboard';
+import {DashboardTable} from "./DashboardTable";
+import { Route } from 'react-router';
+import { FlatRoutes } from '@backstage/core-app-api';
 
 const useStyles = makeStyles({
   gridPadding: {
@@ -47,7 +49,9 @@ export const DashboardComponent = () => {
             className={classes.gridPadding}
           >
             <Grid item>
-              <DashboardTable data={dashboardData} />
+              <FlatRoutes>
+                <Route path="/" element={<DashboardTable />} />
+              </FlatRoutes>
             </Grid>
           </Grid>
         </Grid>
