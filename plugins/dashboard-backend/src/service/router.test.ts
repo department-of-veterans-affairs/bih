@@ -50,4 +50,12 @@ describe('createRouter', () => {
       expect(response.body).toBeDefined();
     });
   });
+
+  describe('GET /links', () => {
+    it ('returns the mock data', async () => {
+      const response = await request(app).get('/links');
+      expect(response.status).toEqual(200);
+      expect(response.body).toBeDefined();
+    })
+  })
 });

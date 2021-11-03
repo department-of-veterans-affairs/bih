@@ -12,7 +12,7 @@ import {
 import { msw, renderInTestApp } from '@backstage/test-utils';
 import { DashboardApi, DashboardRestApi, dashboardApiRef } from '../../api/api';
 
-describe('ExampleComponent', () => {
+describe('DashboardComponent', () => {
   const server = setupServer();
   // Enable sane handlers for network requests
   msw.setupDefaultHandlers(server);
