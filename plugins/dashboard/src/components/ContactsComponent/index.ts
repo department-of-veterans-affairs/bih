@@ -1,0 +1,1 @@
+export { ContactsComponent } from './ContactsComponent';

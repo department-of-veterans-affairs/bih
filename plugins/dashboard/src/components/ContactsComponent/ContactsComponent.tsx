@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Table, TableColumn } from '@backstage/core-components';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
@@ -24,15 +24,14 @@ const useStyles = makeStyles({
   },
 });
 
-export const DashboardTable = (devOpsdata: any) => {
+export const ContactsComponent = () => {
   const classes = useStyles();
-  const [testData, setTestData] = useState([]);
 
   const mapDashBoardData = (devOpsdata: any) => {
     const linkData = (
       <Grid>
         <h3 className={classes.heading}>Important Links</h3>
-        {devOpsdata?.data?.links.map((link: any, i: number) => {
+        {devOpsdata.data.links.map((link: any, i: number) => {
           return (
             <Grid className={classes.linkParent} key={i}>
               <a href="#" className={classes.link}>
@@ -46,7 +45,7 @@ export const DashboardTable = (devOpsdata: any) => {
     const contactData = (
       <Grid>
         <h3 className={classes.heading}>Product Contact List</h3>
-        {devOpsdata?.data?.contactList.map((contact: any, i: number) => {
+        {devOpsdata.data.contactList.map((contact: any, i: number) => {
           return (
             <Grid className={classes.contact} key={i}>
               <Typography>
@@ -58,9 +57,9 @@ export const DashboardTable = (devOpsdata: any) => {
       </Grid>
     );
     const healthData =
-      `${Math.ceil(devOpsdata?.data?.health)}` + ' of 3 servers are on';
+      `${Math.ceil(devOpsdata.data.health)}` + ' of 3 servers are on';
 
-    const updatedTestData: any = [
+    const updatedTestData = [
       {
         prodInfo: linkData,
         cicd: null,
@@ -82,33 +81,36 @@ export const DashboardTable = (devOpsdata: any) => {
     ];
     setTestData(updatedTestData);
   };
-  useEffect(() => {
-    if (devOpsdata.data !== null && testData.length === 0) {
-      mapDashBoardData(devOpsdata);
-    }
-  });
   const columns: TableColumn[] = [
     {
-      title: 'ProductInfo',
-      field: 'prodInfo',
+      title: 'Product Name',
+      field: 'prodName',
     },
     {
-      title: 'CICD',
-      field: 'cicd',
+      title: 'Product Line',
+      field: 'prodLine',
     },
     {
-      title: 'Security',
-      field: 'security',
+      title: 'VA PM',
+      field: 'vapm',
     },
     {
-      title: 'Other',
-      field: 'other',
+      title: 'BAH PM',
+      field: 'bahpm',
+    },
+    {
+      title: 'Scrum Master',
+      field: 'scrumMaster',
+    },
+    {
+      title: 'Tech Lead',
+      field: 'techLead',
     },
   ];
 
   return (
     <Table
-      title="Current Status"
+      title="Contact List"
       columns={columns}
       data={testData || null}
       options={{ paging: false }}

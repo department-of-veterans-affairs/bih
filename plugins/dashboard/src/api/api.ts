@@ -47,11 +47,22 @@ export type ContactsResponse = {
       techLead: string[];
     }[];
   };
+export type ImportantLinkResponse = {
+  data: {
+    productName: string;
+    github: string[];
+    confluence: string[];
+    jira: string[];
+    licensing: string[];
+    sslCerts: string[];
+  }[];
+};
+
 export class FetchError extends Error {
     get name(): string {
       return this.constructor.name;
     }
-  
+
     static async forResponse(resp: Response): Promise<FetchError> {
       return new FetchError(
         `Request failed with status code ${
@@ -65,10 +76,11 @@ export type DashboardApi = {
     url: string;
     getDashboardData: () => Promise<DashboardDataResponse>;
     getContacts: () => Promise<ContactsResponse>;
+    getImportantLinks: () => Promise<ImportantLinkResponse>;
 }
 
 export const dashboardApiRef = createApiRef<DashboardApi>({
-    id: 'dashboard-backend',
+    id: 'plugin.dashboard-backend.service',
     description: 'Used by the Dashboard plugin to make requests'
 });
 
@@ -92,4 +104,8 @@ export class DashboardRestApi implements DashboardApi {
     async getContacts(): Promise<ContactsResponse> {
         return this.fetch<ContactsResponse>('/api/dashboard/contacts');
       }
+
+    async getImportantLinks(): Promise<ImportantLinkResponse> {
+      return this.fetch<ImportantLinkResponse>('/api/dashboard/links');
+    }
 }

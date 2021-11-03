@@ -18,7 +18,7 @@ import { errorHandler } from '@backstage/backend-common';
 import express from 'express';
 import Router from 'express-promise-router';
 import { Logger } from 'winston';
-import { getDashboardData } from './dashboardService';
+import {getDashboardData, getImportantLinks} from './dashboardService';
 
 export interface RouterOptions {
   logger: Logger;
@@ -38,6 +38,10 @@ export async function createRouter(
   });
   router.get('/data', (_, response) => {
     const data = getDashboardData();
+    response.status(200).json({ data });
+  })
+  router.get('/links', (_, response) => {
+    const data = getImportantLinks();
     response.status(200).json({ data });
   })
   router.use(errorHandler());
