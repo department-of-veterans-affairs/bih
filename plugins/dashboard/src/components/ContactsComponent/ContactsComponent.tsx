@@ -1,9 +1,13 @@
-import React from 'react';
-import { Table, TableColumn } from '@backstage/core-components';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { ReactElement } from 'react';
 import { Grid, Typography } from '@material-ui/core';
+import { Page, Content, Table, TableColumn } from '@backstage/core-components';
+import { makeStyles } from '@material-ui/core/styles';
+import { useContacts } from '../../hooks/useContacts';
 
 const useStyles = makeStyles({
+  gridPadding: {
+    padding: '10px',
+  },
   gridParent: {
     height: '100%',
   },
@@ -26,61 +30,39 @@ const useStyles = makeStyles({
 
 export const ContactsComponent = () => {
   const classes = useStyles();
-
-  const mapDashBoardData = (devOpsdata: any) => {
-    const linkData = (
-      <Grid>
-        <h3 className={classes.heading}>Important Links</h3>
-        {devOpsdata.data.links.map((link: any, i: number) => {
-          return (
-            <Grid className={classes.linkParent} key={i}>
-              <a href="#" className={classes.link}>
-                {link}
-              </a>
-            </Grid>
-          );
-        })}
+  const contacts = useContacts();
+  function renderContacts(contactStrings: string[]): ReactElement {
+    return (
+      <Grid className={classes.linkParent}>
+        {contactStrings.map((contactString, i) => (
+          <Grid key={i}>
+            <Typography className={classes.link}>{contactString}</Typography>
+          </Grid>
+        ))}
       </Grid>
     );
-    const contactData = (
-      <Grid>
-        <h3 className={classes.heading}>Product Contact List</h3>
-        {devOpsdata.data.contactList.map((contact: any, i: number) => {
-          return (
-            <Grid className={classes.contact} key={i}>
-              <Typography>
-                {contact.name}: {contact.email}
-              </Typography>
-            </Grid>
-          );
-        })}
-      </Grid>
-    );
-    const healthData =
-      `${Math.ceil(devOpsdata.data.health)}` + ' of 3 servers are on';
+  }
 
-    const updatedTestData = [
-      {
-        prodInfo: linkData,
-        cicd: null,
-        security: null,
-        other: healthData,
-      },
-      {
-        prodInfo: contactData,
-        cicd: null,
-        security: null,
-        other: null,
-      },
-      {
-        prodInfo: null,
-        cicd: null,
-        security: null,
-        other: null,
-      },
-    ];
-    setTestData(updatedTestData);
-  };
+  const tableData = React.useMemo(() => {
+    return contacts.map(contactDataItem => {
+      return {
+        productName: (
+          <Typography variant="subtitle1">
+            {contactDataItem.productName}
+          </Typography>
+        ),
+        productLine: (
+          <Typography variant="subtitle1">
+            {contactDataItem.productLine}
+          </Typography>
+        ),
+        vaPm: renderContacts(contactDataItem.vaPm),
+        bahPm: renderContacts(contactDataItem.bahPm),
+        scrumMaster: renderContacts(contactDataItem.scrumMaster),
+        techLead: renderContacts(contactDataItem.techLead),
+      };
+    });
+  }, [contacts]);
   const columns: TableColumn[] = [
     {
       title: 'Product Name',
@@ -109,11 +91,25 @@ export const ContactsComponent = () => {
   ];
 
   return (
-    <Table
-      title="Contact List"
-      columns={columns}
-      data={testData || null}
-      options={{ paging: false }}
-    />
+    <Page themeId="tool">
+      <Content>
+        <Grid
+          container
+          lg={12}
+          item={true}
+          direction="column"
+          className={classes.gridPadding}
+        >
+          <Grid item>
+            <Table
+              title="Important Contacts"
+              columns={columns}
+              data={tableData}
+              options={{ paging: false }}
+            />
+          </Grid>
+        </Grid>
+      </Content>
+    </Page>
   );
 };
