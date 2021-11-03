@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import {Grid, Typography} from '@material-ui/core';
-import {Header, Page, Content, Table, TableColumn} from '@backstage/core-components';
+import {Page, Content, Table, TableColumn} from '@backstage/core-components';
 import {makeStyles} from "@material-ui/core/styles";
 import {useLinks} from "../../hooks/useLinks";
 
@@ -81,35 +81,23 @@ export const ImportantLinkComponent = () => {
 
     return (
         <Page themeId="tool">
-            <Header title="Important Links" />
-            <Content>
-            <Grid container>
-          <Grid
-            container
-            lg={2}
-            item={true}
-            direction="column"
-            className={classes.gridPadding}
-          >
-
-          </Grid>
-          <Grid
-            container
-            lg={10}
-            item={true}
-            direction="column"
-            className={classes.gridPadding}
-          >
-            <Grid item>
-              <Table title="Important Links"
-              columns={columns}
-              data={tableData}
-              options={{ paging: false }}
-              />
-            </Grid>
-          </Grid>
-        </Grid>
-            </Content>
+          <Content>
+            <Grid
+              container
+              lg={12}
+              item={true}
+              direction="column"
+              className={classes.gridPadding}
+            >
+              <Grid item>
+                <Table title="Important Links"
+                columns={columns}
+                data={tableData}
+                options={{ paging: false }}
+                />
+              </Grid>
+              </Grid>
+          </Content>
         </Page>
     );
 };

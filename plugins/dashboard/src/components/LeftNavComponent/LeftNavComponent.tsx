@@ -1,8 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-/* import Alert from '@material-ui/lab/Alert';
-import { useAsync } from 'react-use';
-import { Content } from '@backstage/core-components'; */
 import { Box, List, ListItem, Typography } from '@material-ui/core';
 import {Link} from "@backstage/core-components";
 
@@ -17,9 +14,11 @@ const useStyles = makeStyles({
     background: 'white',
   },
   selected: {
+    color: 'black',
     borderLeft: '6px solid #112e51',
   },
   unselected: {
+    color: 'black',
     borderLeft: '6px solid white',
     '&:hover': {
       cursor: 'pointer',
@@ -43,6 +42,8 @@ export const LeftNavComponent = (tableProp: any) => {
         <ListItem
           className={table === 'home' ? classes.selected : classes.unselected}
           onClick={() => resetPageLocation('home')}
+          component={Link}
+          to="/dashboard"
         >
           <Typography>Home</Typography>
         </ListItem>
